@@ -23,19 +23,14 @@ let catImage = document.getElementById("cat");
          .then(data => {
             const nameIndex = Math.floor(Math.random() * data.names.length);
             const thingIndex = Math.floor(Math.random() * data.things.length);
+            data.names.push(namaIndex);
+            data.things.push(namaIndex);
             return (data.names[nameIndex]+" "+data.things[thingIndex]).toUpperCase();             
          })
          .catch(error => console.warn(error));          
  }
 
- function checkOn() {
-    console.log('OK Loaded')
- }
 
- 
- window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-  });
  document.addEventListener('click', setImage);
 
 
